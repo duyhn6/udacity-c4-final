@@ -41,8 +41,6 @@ jobs:
 
             docker tag backend duyhn6/api-backend:lastest
 
-            docker tag reverseproxy duyhn6/reverseproxy:lastest
-
             docker tag client:local duyhn6/client:lastest
 
       - run:
@@ -55,10 +53,8 @@ jobs:
 
             docker push duyhn6/api-backend:lastest
 
-            docker push duyhn6/reverseproxy:lastest
-
             docker push duyhn6/client:lastest
-
+  
 workflows:
 
   default:

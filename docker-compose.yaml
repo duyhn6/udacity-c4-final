@@ -1,14 +1,14 @@
 version: "3"
 services:
-  reverseproxy:
-      image: reverseproxy:v1
-      ports:
-          - 8080:8080
-      restart: always
-      depends_on:
-        - api-backend
+  # reverseproxy:
+  #     image: reverseproxy
+  #     ports:
+  #         - 8080:8080
+  #     restart: always
+  #     depends_on:
+  #       - api-backend
   backend:
-    image: api-backend:v1
+    image: api-backend
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -25,4 +25,4 @@ services:
     volumes:
       - $HOME/.aws:/root/.aws
     ports:
-      - "8100:80"
+      - "3000"
