@@ -39,7 +39,7 @@ jobs:
 
             docker-compose -f docker-compose-build.yaml build --parallel
 
-            docker tag api-backend duyhn6/backend:lastest
+            docker tag backend duyhn6/api-backend:lastest
 
             docker tag reverseproxy duyhn6/reverseproxy:lastest
 
