@@ -1,0 +1,14 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: ./reverseproxy
+    image: reverseproxy
+  backend:
+    build:
+      context: ./api-backend
+    image: api-backend
+  frontend:
+    build:
+      context: ./client
+    image: client:local
