@@ -14,7 +14,6 @@ COPY . .
 
 # Build the React app
 RUN npm run build
-RUN npm install -g npm@9.7.2
 
 # Expose the port that your React app will listen on
 EXPOSE 3000
